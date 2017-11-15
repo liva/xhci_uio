@@ -9,6 +9,13 @@ default: a.out
 
 -include $(DEPS)
 
+# need to be edited by yourself
+load:
+	sudo modprobe uio_pci_generic
+	sudo sh -c "echo 'xxxx xxxx' > /sys/bus/pci/drivers/uio_pci_generic/new_id"
+	sudo sh -c "echo -n 0000:xx:xx.0 > /sys/bus/pci/drivers/xhci_hcd/unbind"
+	sudo sh -c "echo -n 0000:xx:xx.0 > /sys/bus/pci/drivers/uio_pci_generic/bind"
+
 load_vagrant:
 	sudo modprobe uio_pci_generic
 	sudo sh -c "echo '8086 1e31' > /sys/bus/pci/drivers/uio_pci_generic/new_id"
