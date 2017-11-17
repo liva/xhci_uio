@@ -3,6 +3,7 @@ Simple implementation of xHCI (USB3.0 Host Controller) Linux usermode driver
 (and keyboard driver for demo)
 
 ## HOWTO
+!! You should use SSH. !!
 
 ### setup environment
 [This script](https://github.com/PFLab-OS/Raph_Kernel_devenv_box/blob/master/uio.sh) downloads linux kernel source and builds uio kernel module.
