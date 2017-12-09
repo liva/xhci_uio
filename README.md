@@ -11,7 +11,8 @@ It will work on Ubuntu 14.04 or later.
 
 ```
 $ wget https://raw.githubusercontent.com/PFLab-OS/Raph_Kernel_devenv_box/master/uio.sh
-$ ./setup.sh
+$ chmod +x uio.sh
+$ ./uio.sh
 ```
 
 ### Identify vendor ID and bus number
