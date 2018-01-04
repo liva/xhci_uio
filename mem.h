@@ -32,7 +32,10 @@ public:
   }
   ~Memory() {
     if (_size > 0) {
-      munmap(_virt, _size);
+      if (munmap(_virt, 2 * 1024 * 1024) < 0) {
+	perror("munmap:");
+	panic("");
+      }
     }
   }
   template <class T>
