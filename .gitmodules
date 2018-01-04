@@ -1,0 +1,3 @@
+[submodule "pcie_uio"]
+	path = pcie_uio
+	url = git@github.com:PFLab-OS/pcie_uio.git

@@ -1,7 +1,7 @@
 OBJS= main.o keyboard.o xhci.o usb.o hub.o
 DEPS= $(filter %.d, $(subst .o,.d, $(OBJS)))
 
-CXXFLAGS += -g -std=c++11 -MMD -MP
+CXXFLAGS += -g -std=c++11 -I./pcie_uio -MMD -MP
 
 .PHONY: load_uio run
 
